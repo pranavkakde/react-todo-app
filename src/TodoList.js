@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Row, Form, Col,ListGroup, ListGroupItem, Container, Button, InputGroup } from 'react-bootstrap';
-import style from 'bootstrap/dist/css/bootstrap.css';
 
 class TodoList extends Component{
     constructor(props) {
@@ -37,8 +36,8 @@ class TodoList extends Component{
     render(){
         return (
             <div>
-                <h2>TO DO List</h2>
                 <Container>
+                    <Row md={16}>TO DO List</Row>
                     <Row>
                     <Col md={4}>
                     <InputGroup>
