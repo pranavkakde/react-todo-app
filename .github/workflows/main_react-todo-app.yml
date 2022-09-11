@@ -24,12 +24,12 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm install react-scripts -g --silent
           npm install react-scripts --silent
           npm run build --if-present
           npm run test --if-present
       - name: check folder structure
         run: tree
+      
       - name: Zip artifact for deployment
         run: zip release.zip ./build/* -r
         
@@ -60,6 +60,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'react-todo-app'
-          slot-name: 'Production'
+          slot-name: 'staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3CC4B2DE6F4740FD8CF535CE1AF878B0 }}
           package: .
