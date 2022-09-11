@@ -61,8 +61,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'react-web-app-pranav'
-          startup-command: "npm start"
+          app-name: 'react-web-app-pranav'          
           slot-name: 'staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3CC4B2DE6F4740FD8CF535CE1AF878B0 }}
           package: .
